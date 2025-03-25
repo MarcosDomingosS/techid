@@ -1,0 +1,181 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+/* Classes base */
+
+.title-font {
+    font-size: 50px;
+    color:#2F2F2C;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+}
+
+/* PRIMEIRA DIVISÃO */
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+header img {
+    height: 40px;
+}
+
+nav a {
+    color: #920A0A;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SEGUNDA DIVISÃO */
+
+/* Main */
+main{
+    margin: auto;
+    margin-top: -10px;
+    width: 1111px;
+    height: 85vh;
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to left, #F2F0EB, #f4cbc7);
+}
+
+main img{
+    width: 500px;
+    height: 500px;
+}
+
+form{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+form h1{
+    margin-bottom: 20px;
+}
+
+.form-input {
+    text-align: left;
+}
+
+.form-input input{
+    margin: 10px 0 5px 0;
+    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgb(160, 159, 159);
+    border-radius: 5px;
+    width: 700px;
+    height: 35px;
+    padding: 10px;
+}
+
+form button{
+    width: 300px;
+    height: 35px;
+    background-color: #920A0A;
+    color: #F2F0EB;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover{
+        background-color: #B3261E;
+    }
+}
+
+/* Rodapé */
+footer {
+    background: linear-gradient(to top, #F2F0EB, #fbb9b3 60%);
+    color: #920A0A;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+
+footer .links-row{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .links-section{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-container{
+    width: 300px;
+    padding: 10px 30px;
+    text-align: left;
+}
+
+.footer-container ul{
+    padding-left: 10px;
+}
+
+footer p{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-input{
+    text-align: left;
+}
+
+.contact-input input{
+    background-color: transparent;
+    border: 1px solid black;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+}
+
+.contact-input button{
+    padding: 7px;
+    color: #F2F0EB;
+    background-color: #8a0000;
+    border: 0;
+    cursor: pointer;
+}
+
+.footer-copyright hr{
+    margin: 20px 0;
+    border: 1px solid #8a0000;
+}
+
+.error{
+    color: red;
+}

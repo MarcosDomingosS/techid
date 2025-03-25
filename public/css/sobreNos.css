@@ -1,0 +1,85 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.title-font{
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    color:#2F2F2C;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+    margin: 2vw;
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    margin: 2vw;
+}
+
+.etica-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.box-container{
+    width: 40vw;
+    border: 3px solid black;
+    margin: 10px 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+h3{
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+.ods-container-left h3{
+    margin-left: 1vw;
+}
+
+.ods-container-right h3{
+    margin-right: 1vw;
+}
+
+.ods-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.ods-content img{
+    width: 10vw;
+    height: 20vh;
+}
+
+.ods-container-left, .ods-container-right{
+    margin-left: 2vw;
+    width: 50vw;
+}
+
+.ods-container-right{
+    margin-left: 45vw;
+    text-align: right;
+}
+
+section{
+    width: 80vw;
+    margin-left: 2vw;
+    margin-top: 10px;
+}
+
+section h3{
+    margin-left: 2vw;
+}

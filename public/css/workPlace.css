@@ -1,0 +1,458 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    display: grid;
+    flex-direction: row;
+    grid-template-areas:
+    'aside main';
+    grid-auto-columns: 300px 4fr;
+    overflow-y: hidden;
+}
+
+aside{
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: auto;
+    align-content: start;
+    height: 100vh;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+}
+main{
+    grid-area: main;
+    overflow-y: auto;
+}
+
+.initial-main{
+    display: grid;
+    justify-items: end;
+    align-items: end;
+}
+
+main .greetings {
+    justify-self: start;
+    align-self: start;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+/*Aside*/
+
+
+/* Aside */
+
+aside img{
+    height: 40px;
+    margin: 20px;
+}
+
+.selected{ /*classe ativada*/
+    border-right: 5px solid #920A0A;
+    &:hover{
+        border-right: 5px solid #920A0A;
+    }
+}
+
+aside li{
+    list-style-type: none;
+    margin-left: -10px;
+}
+
+aside li a{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    color: #2F2F2C;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+aside li img{
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+aside li p{
+    margin-top: 5px;
+    margin-left: 10px
+}
+
+aside li:hover{
+    background-color: #dbdbda;
+    color: black;
+}
+
+/* Config e sair */
+
+.functions-sidebar hr{
+    width: 210px;
+    margin: 5px 5px 5px 10px;
+    background-color: #98948A;
+}
+
+.functions-sidebar li{
+    border: 0;
+}
+
+.functions-sidebar li img{
+    width: 30px;
+    height: 30px;
+}
+
+.functions-sidebar li a{
+    color: #98948A;
+    text-decoration: none;
+    height: 60px;
+}
+
+/*Fim Aside*/
+
+.form-title-font{
+    font-size: 50px;
+    color:#2F2F2C;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+}
+
+.title-font {
+    font-size: 80px;
+    color:#2F2F2C;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-cadastro{
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-self: center;
+    width: 40vw;
+    height: auto;
+    background-color: #f3f3f3;
+    border-radius: 100px;
+    padding: 35px;
+}
+
+.form-cadastro label{
+    justify-self: start;
+    margin-left: 15%;
+}
+
+.form-cadastro input{
+    margin: 10px 0 5px 0;
+    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgb(160, 159, 159);
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+}
+
+.form-cadastro button{
+    width: 300px;
+    height: 35px;
+    background-color: #920A0A;
+    color: #F2F0EB;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 30px;
+    cursor: pointer;
+    &:hover{
+        background-color: #B3261E;
+    }
+}
+
+.error{
+    color: red;
+    font-weight: 250;
+}
+
+
+/* MAIN */
+
+main img{
+    width: 400px;
+    height: 400px;
+}
+
+/* Eventos */
+
+/* Views dos Eventos*/
+.section-add-event{
+    background-color: #FCFBFA;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 70vw;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+
+.add-event{
+    margin-left: 60vw;
+    padding: 10px;
+    background-color: #8a0000;
+    border: 0;
+    border-radius: 10px;
+    &:hover{
+        background-color: #a70101;
+    }
+}
+
+.add-event a{
+    color: #F2F0EB;
+    text-decoration: none;
+}
+
+.empty{
+    font-family: "Inter", sans-serif;
+}
+
+.empty a{
+    color: #0D99FF;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.events{
+    font-family: "Inter", sans-serif;
+    list-style-type: none;
+    background:  linear-gradient(270deg, rgb(231, 110, 110) 0%, rgba(237,167,167,1) 13%, rgba(254,238,238,1) 48%);
+    width: 20vw;
+    padding: 20px;
+    height: 20vh;
+    margin-top: 10px;
+    border: 1px solid #8a0000;
+    border-radius: 2%;
+}
+
+.events h4{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.events p{
+    font-size: 14px;
+}
+
+.events button{
+    padding: 10px 20px;
+    background-color: #8a0000;
+    border: 0;
+    border-radius: 10px;
+    margin-left: 11vw;
+    &:hover{
+        background-color: #a70101;
+    }
+}
+
+.events button a{
+    color: #F2F0EB;
+    text-decoration: none;
+}
+
+.title-font-event {
+    justify-self: start;
+    align-self: start;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 80px;
+    color:#2F2F2C;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Cadastro e edição */
+
+.back-button{
+    background-color: #8a0000;
+    width: 5vw;
+    padding: 10px;
+    margin: 15px 0;
+    border: 0;
+    border-radius: 5px;
+    &:hover{
+        background-color: #a70101;
+    }
+}
+
+.back-button a{
+    color: #F2F0EB;
+    text-decoration: none;
+}
+
+.form-cadastro-evento{
+    background-color: #FCFBFA;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 50vh;
+    display: grid;
+    margin: auto;
+}
+
+.form-cadastro-evento label{
+    font-family: "Inter", sans-serif;
+}
+
+.form-cadastro-evento input{
+    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgb(160, 159, 159);
+    border-radius: 5px;
+    width: 30vw;
+    height: 35px;
+    padding: 10px;
+}
+
+.form-cadastro-evento button{
+    background-color: #8a0000;
+    color: #F2F0EB;
+    width: 10vw;
+
+    margin: 15px 20px 0 0;
+    border: 0;
+    border-radius: 5px;
+    &:hover{
+        background-color: #a70101;
+        cursor: pointer;
+    }
+}
+
+.row-button button{
+    padding: 10px;
+}
+
+.del-button{
+    color: red; background-color: rgb(233, 233, 233);
+    &:hover{
+        background-color:  rgb(205, 205, 205);
+        cursor: pointer;
+    }
+}
+
+.table{
+    display: grid;
+    place-items: center;
+}
+
+table{
+    border: 0px transparent solid;
+    width: 600px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 1px 10px #2F2F2C;
+}
+
+table td{
+    font-weight: 400;
+}
+
+.tdTitulo{
+    font-family: "Poppins", sans-serif;
+    font-size: large;
+    font-weight: 900;
+}
+
+.button-table{
+    width: 300px;
+    height: 35px;
+    background-color: #920A0A;
+    color: #F2F0EB;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 30px;
+    cursor: pointer;
+    box-shadow: 1px 10px 10px #2F2F2C;
+    &:hover{
+        background-color: #B3261E;
+    }
+    &:active{
+        transform: scale(0.95);
+        box-shadow: 1px 7px 10px #2F2F2C;
+    }
+}
+
+.button-table a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.profile{
+    display: grid;
+    place-items: center;
+    border: 0px transparent solid;
+    width: 600px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 1px 10px #2F2F2C;
+}
+
+/* Eventos Visualização */
+
+.event{
+    font-family: "Inter", sans-serif;
+    list-style-type: none;
+    background:  linear-gradient(270deg, rgb(231, 110, 110) 0%, rgba(237,167,167,1) 13%, rgba(254,238,238,1) 48%);
+    width: 30vw;
+    padding: 20px;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #8a0000;
+    border-radius: 2%;
+}
+
+.event p{
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.event button{
+    padding: 10px 20px;
+    background-color: #8a0000;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    &:hover{
+        background-color: #a70101;
+    }
+}
+
+.event button a{
+    color: #F2F0EB;
+    text-decoration: none;
+}
+
+.event-buttons{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px;
+}

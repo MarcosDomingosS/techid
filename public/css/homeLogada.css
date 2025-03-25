@@ -1,0 +1,148 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Podkova:wght@400..800&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Classes base */
+
+.title-font {
+    font-size: 80px;
+    color:#2F2F2C;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+
+/* PRIMEIRA DIVISÃO */
+
+/* Menu */
+
+aside{
+    width: 15%;
+    height: 100vh;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Aside */
+
+aside img{
+    height: 40px;
+    margin: 20px;
+}
+
+.selected{ /*classe ativada*/
+    border-right: 5px solid #920A0A;
+    &:hover{
+        border-right: 5px solid #920A0A;
+    }
+}
+
+aside li a{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    color: #2F2F2C;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+aside li img{
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+aside li p{
+    margin-top: 5px;
+}
+
+aside li:hover{
+    background-color: #dbdbda;
+    color: black;
+}
+
+/* Config e sair */
+
+.functions-sidebar hr{
+    width: 210px;
+    margin: 5px 5px 5px 10px;
+    background-color: #98948A;
+}
+
+.functions-sidebar li{
+    border: 0;
+}
+
+.functions-sidebar li img{
+    width: 30px;
+    height: 30px;
+}
+
+.functions-sidebar li a{
+    color: #98948A;
+    text-decoration: none;
+    height: 60px;
+}
+
+
+
+/* SEGUNDA DIVISÃO */
+
+/* Main */
+main{
+    background: url(../assets/bg-home-logado.png);
+}
+/* Cabeçalho */
+header {
+    width: 85vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    text-align: right;
+}
+
+nav a {
+    color: #2F2F2C;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;  
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/*BEM VINDO*/
+
+main h2{
+    font-family: "Podkova", serif;
+    color:#2F2F2C;
+    margin-top: -20px;
+    font-size: 38px;
+}
+
+.greetings{
+    margin-left: 50px;
+}
+
+main img{
+    margin-left: 90%;
+    margin-top: 75px;
+    width: 600px;
+}
