@@ -15,18 +15,22 @@ return new class extends Migration
         //     $table->id('id_sed');
         //     $table->string('nm_sed');
         // });
-
+        Schema::create('tb_cargos', function (Blueprint $table) {
+            $table->id('id_cargo');
+            $table->string('ds_permissoes',1000);
+        });
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('permissions');
             $table->string('password');
-            $table->string('role');
             $table->rememberToken();
+            $table->unsignedBigInteger('id_cargo');
+            $table->foreign('id_cargo')->references('id_cargo')->on('tb_cargos');
+            $table->timestamps();
             // $table->unsignedBigInteger('id_sed');
             // $table->foreign('id_sed')->references('id_sed')->on('tb_sed');
-            $table->timestamps();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
@@ -51,6 +55,7 @@ return new class extends Migration
     public function down(): void
     {
         // Schema::dropIfExists('tb_sed');
+        Schema::dropIfExists('tb_cargos');
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
