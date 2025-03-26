@@ -15,7 +15,7 @@ class Supervisor extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            ['name' => 'Supervisor', 'email' => 'm@gmail.com', 'password'=>Hash::make('aaaaaaaa'), 'role'=>'Supervisor']
+            ['name' => 'Supervisor', 'email' => 'm@gmail.com', 'password'=>Hash::make('aaaaaaaa'), 'id_cargo'=> 1]
         ]);
     }
 }
