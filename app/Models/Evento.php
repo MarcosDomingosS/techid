@@ -9,11 +9,14 @@ class Evento extends Model
     protected $table = 'tb_evento';
     protected $fillable = [
         'nm_evento',
-        'dt_evento'
+        'dt_inicio',
+        'dt_fim',
+        'ds_tipo'
     ];
 
     protected $casts = [
-        'dt_evento' => 'datetime',
+        'dt_inicio' => 'datetime',
+        'dt_fim' => 'datetime',
     ];
 
     protected $primaryKey = 'id_evento';

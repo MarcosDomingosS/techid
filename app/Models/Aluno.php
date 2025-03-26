@@ -13,7 +13,7 @@ class Aluno extends Model
     protected $fillable = [
         'nr_rm',
         'nm_aluno',
-        'cd_rfid',
-        'img_aluno'
+        'id_rfid',
+        'img_aluno',
     ];
 }
