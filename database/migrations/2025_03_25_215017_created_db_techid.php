@@ -18,7 +18,7 @@ return new class extends Migration
         Schema::create('tb_aluno', function (Blueprint $table) {
             $table->char('nr_rm', 5)->primary();
             $table->string('nm_aluno', 100);
-            $table->unsignedBigInteger('id_rfid');
+            $table->unsignedBigInteger('id_rfid')->nullable();
             $table->foreign('id_rfid')->references('id_rfid')->on('tb_rfid');
             $table->string('img_aluno');
             $table->timestamps();
