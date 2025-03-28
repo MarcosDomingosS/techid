@@ -17,6 +17,7 @@ return new class extends Migration
         // });
         Schema::create('tb_cargos', function (Blueprint $table) {
             $table->id('id_cargo');
+            $table->string('nm_cargo');
             $table->string('ds_permissoes',1000);
         });
         Schema::create('users', function (Blueprint $table) {

@@ -15,15 +15,15 @@
         <h1>Sábados Letivos</h1>
         <table>
             <tr class="trLinha">
-                <td class="tdTitulo">Nome:</td>
                 <td class="tdTitulo">Rm:</td>
-                <td class="tdTitulo">RFID:</td>
+                <td class="tdTitulo">Nome:</td>
+                <td class="tdTitulo">Horário:</td>
             </tr>
             @foreach ($alunos as $aluno)
             <tr class="trAluno">
-                <td class="tdPerfil"><a href="{{route('aluno.profile',['nr_rm'=>$aluno->nr_rm])}}">{{$aluno->nm_aluno}}</a></td>
-                <td>{{$aluno->nr_rm}}</td>
-                <td>{{$aluno->cd_rfid}}</td>
+                <td>{{$aluno->RM}}</td>
+                <td class="tdPerfil"><a href="{{route('aluno.profile',['nr_rm'=>$aluno->RM])}}">{{$aluno->Nome}}</a></td>
+                <td>{{$aluno->Horario_da_presenca}}</td>
             </tr>
             @endforeach
         </table>

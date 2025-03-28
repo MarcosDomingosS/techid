@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Aluno;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Registro_Evento;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -57,7 +58,14 @@ class AlunoController extends Controller
 
     public function sabado()
     {
-        $alunos = Aluno::where('nm_aluno', '>', 'h')->get();
+        $alunos = Registro_Evento::
+        join('tb_aluno_classe as al_cl', 'tb_registro_evento.id_aluno_classe', '=', 'al_cl.id_aluno_classe')
+        ->join('tb_aluno as al', 'al_cl.nr_rm', '=', 'al.nr_rm')
+        ->join('tb_classe as cl', 'al_cl.id_classe', '=', 'cl.id_classe')
+        ->join('tb_evento as ev', 'tb_registro_evento.id_evento', '=', 'ev.id_evento')
+        ->select(['al.nr_rm as RM', 'al.nm_aluno as Nome', 'tb_registro_evento.created_at as Horario_da_presenca'])
+        ->where('ev.ds_tipo', '=', 'Sabado Letivo')
+        ->get();
         return view('wppSabLet', ['alunos' => $alunos, 'request' => 'Sabado']);
     }
 
@@ -87,5 +95,5 @@ class AlunoController extends Controller
         return response()->download($arquivo, $nomeArquivo)->deleteFileAfterSend(true);
     }
 
-    
+
 }
